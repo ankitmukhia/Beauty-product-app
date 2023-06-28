@@ -2,7 +2,7 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const FETCH_API = 'http://192.168.0.104:5000/products/';
+const FETCH_API = 'https://react-native-developer-exercise.onrender.com/products/';
 
 export const fetchData = createAsyncThunk(
   'sephora/fetchData',
