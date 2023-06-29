@@ -35,9 +35,9 @@ const Card = ({title, description, imageUrl, item}) => {
         />
 
         <View className="px-3 pb-4 space-y-2">
-          <Text className="text-lg font-bold pt-2">{title}</Text>
+          <Text className="text-lg font-bold pt-2 text-black">{title}</Text>
           <View className="flex-row items-center space-x-1">
-            <Text className="text-xs">{description}</Text>
+            <Text className="text-xs text-gray-500">{description}</Text>
           </View>
           <View className="flex-row items-center space-x-1 mr-10">
             <TouchableOpacity className="bg-[#d6a775] p-2 px-5 rounded-full">
