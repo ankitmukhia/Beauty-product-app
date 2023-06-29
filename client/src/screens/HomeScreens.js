@@ -92,7 +92,7 @@ const HomeScreens = () => {
             showsHorizontalScrollIndicator={false}
             data={categories}
             className="overflow-visible"
-            keyExtractor={item => item._id}
+            keyExtractor={item => item.id}
             renderItem={({item}) => {
               let isActive = item.id === activeCategory;
               let activeText = isActive ? 'text-white' : 'text-gray-700';
