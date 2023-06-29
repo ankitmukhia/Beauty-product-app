@@ -98,6 +98,7 @@ const ProductDetailsScreen = ({navigation}) => {
             {benefits.map(item => {
               return (
                 <Benefits
+                  key={item.id}
                   title={item.title}
                   image={item.image}
                   description={description}
@@ -132,7 +133,7 @@ const ProductDetailsScreen = ({navigation}) => {
           {review?.map(item => {
             return (
               <Review
-                key={item._id}
+                key={item.id}
                 mainImage={item.mainImage}
                 subImage={item.pushImage}
                 description={item.description}
