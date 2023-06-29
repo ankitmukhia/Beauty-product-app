@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, ActivityIndicator} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import React, {useEffect} from 'react';
 import Card from './Card';
@@ -17,17 +17,23 @@ const SkinCareRow = () => {
   }, [dispatch]);
   return (
     <>
-      {response?.data.map((item) => {
-        return (
-          <Response
-            key={item._id}
-            item={item}
-            title={item.title}
-            desc={item.description}
-            products={item.products}
-          />
-        );
-      })}
+      {!response?.data ? (
+        <View className="flex-row justify-center items-center px-4">
+            <ActivityIndicator size={80} color="#d6a775" />
+          </View>
+      ) : (
+        response?.data.map((item) => {
+          return (
+            <Response
+              key={item._id}
+              item={item}
+              title={item.title}
+              desc={item.description}
+              products={item.products}
+            />
+          );
+        })
+      )}
     </>
   );
 };
