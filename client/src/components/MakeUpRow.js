@@ -39,7 +39,7 @@ export const Response = ({title, desc, products}) => {
     <>
       <View className="flex-row justify-between items-center px-4">
         <View>
-          <Text className="font-bold text-lg">{title}</Text>
+          <Text className="font-bold text-lg text-black">{title}</Text>
           <Text className="text-gray-500 text-xs">{desc}</Text>
         </View>
       </View>
