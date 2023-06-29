@@ -26,5 +26,5 @@
 - Follow the guid to play with it locally.
 - Clone or download the repo
 - `npm install || yarn install` to install dependencies
-- `npm start` to start the packager and run the app in the simulator
+- `npm run android || yarn android` to start the packager and run the app in the simulator
 
